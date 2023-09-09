@@ -9,7 +9,7 @@ le = LabelEncoder()
 
 # Load your pre-trained model
 # model = tf.keras.models.load_model(r"C:\Users\N Akhil\bird\bird_species_model.h5")  # Replace with your model path
-model = tf.keras.models.load_model(r"\")  # Replace with your model path
+model = tf.keras.models.load_model(r"birdwebsite/bird_species_model.h5")  # Replace with your model path
 
 
 # Define a function for bird species prediction
