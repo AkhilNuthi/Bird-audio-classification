@@ -31,6 +31,12 @@ def extract_features(audio_data, sample_rate):
 
 # Streamlit app
 st.title("Bird Species Identification")
+#removing git icon
+t.markdown("""
+    <style>
+        .reportview-container .main footer {visibility: hidden;}
+    </style>
+    """, unsafe_allow_html=True)
 
 # Create a file uploader component
 audio_file = st.file_uploader("Upload an audio file", type=["wav"])
