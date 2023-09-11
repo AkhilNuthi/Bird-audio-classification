@@ -28,15 +28,19 @@ def extract_features(audio_data, sample_rate):
     mfccs = librosa.feature.mfcc(y=yt, sr=sample_rate, n_mfcc=40)
     mfccs_processed = np.mean(mfccs.T, axis=0)
     return mfccs_processed
-
+    
+# Remove the GitHub icon on the top right
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # Streamlit app
 st.title("Bird Species Identification")
-#removing git icon
-t.markdown("""
-    <style>
-        .reportview-container .main footer {visibility: hidden;}
-    </style>
-    """, unsafe_allow_html=True)
+
+
 
 # Create a file uploader component
 audio_file = st.file_uploader("Upload an audio file", type=["wav"])
