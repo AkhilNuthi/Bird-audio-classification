@@ -30,13 +30,13 @@ def extract_features(audio_data, sample_rate):
     return mfccs_processed
     
 # Remove the GitHub icon on the top right
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.markdown(
+    """
+    <link rel="stylesheet" href="style.css">
+    """,
+    unsafe_allow_html=True,
+)
+
 # Streamlit app
 st.title("Bird Species Identification")
 
