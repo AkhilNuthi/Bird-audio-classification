@@ -30,6 +30,7 @@ bird_images = {
     'American Robin': 'birdwebsite/americanrobin.jpeg',
     'Song Sparrow': 'birdwebsite/songsparrow.jpeg',
     'Northern Cardinal': 'birdwebsite/northcardinal.jpeg',
+}
 
 
 def extract_features(audio_data, sample_rate):
